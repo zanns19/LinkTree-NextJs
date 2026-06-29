@@ -13,30 +13,6 @@ export default async function Page({ params }) {
     if(!item){
         return notFound()
     }
-
-    console.log(item)
-
-    const item2 = {
-        "_id": {
-            "$oid": "6729e97390cf30c8f66c4c68"
-        },
-        "links": [
-            {
-                "link": "https://www.instagram.com/codewithharry/?hl=en",
-                "linktext": "Instagram"
-            },
-            {
-                "link": "https://www.codewithharry.com",
-                "linktext": "Website"
-            },
-            {
-                "link": "https://www.YouTube.com/codewithharry/?hl=en",
-                "linktext": "YouTube"
-            }
-        ],
-        "handle": "harry",
-        "pic": "https://avatars.githubusercontent.com/u/48705673?v=4"
-    }
     return <div className="flex min-h-screen bg-purple-400 justify-center items-start py-10">
         {item && <div className="photo flex justify-center flex-col items-center gap-4"> 
             <img src={item.pic} alt="" />
